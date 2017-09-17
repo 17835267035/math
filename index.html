@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math</title>
+</head>
+<body>
+	<script>
+		// console.log(Math.abs(-10));    //绝对值
+		// console.log(Math.max(1,5,8));   //最大值
+		// console.log(Math.min(1,5,8));   //最小值
+		// console.log(Math.round(10.45));   //近似值  10
+		// console.log(Math.round(-0.45));   //近似值  -0
+		// console.log(Math.round(-10.5));   //近似值  -10
+		// console.log(Math.round(-10.4));   //近似值  -10
+		// console.log(Math.ceil(10.45));   //向上取整  11
+		// console.log(Math.ceil(-5.3));   //向上取整  -5
+		// console.log(Math.floor(10.5));   //向下取整  10
+      //   for(let i=0;i<10;i++){
+		    // // console.log(Math.random()*10);   //随机数  
+		    // // console.log(Math.random()*10+10);   //随机数  10~20
+		    // // console.log(Math.random()*15+5);   //随机数  5~20
+		    // // console.log(Math.random()*10-5);   //随机数  -5~5
+      //   }
+        // console.log(Math.pow(2,3));     //x的y次幂
+        // console.log(Math.pow(3,2));     //x的y次幂
+        // console.log(Math.pow(8,8));     //x的y次幂
+        // console.log(Math.sqrt(4));     //平方根
+        
+
+        // function color(){
+        //     let str = 'rgb(';
+        //     for(let i=0;i<3;i++){
+        //     let result = Math.round(Math.random()*255);
+        //     str += result+',';
+        //     }
+        //     // str = str.slice(0,length-1);
+        //     str = str.substr(0,str.length-1);
+        //     str = str+')';
+        //     return str;
+        // }
+        // console.log(color());
+        // let box = document.getElementById('box');  //获取元素
+        // box.onmouseover = function(){              //鼠标移入   事件驱动
+        //     box.style.background = color();
+        // }
+           
+        // 0.从数组中随机取三个数放到新数组，但它此时有重复
+           // let arr = [1,2,3,4,5,6,7];
+           // // 0~length-1
+           // function suiji(arr){
+           // let newarr = [];
+           // for(let i=0;i<3;i++){
+           // 	let result =Math.floor(Math.random()*arr.length);
+           // 	newarr.push(arr[result]);
+           // }
+           // return newarr;
+           //  }
+           //  console.log(suiji(arr));
+
+        
+        //1.从数组中随机取三个数放到新数组
+           let arr1 = [1,2,3,4,5,6,7];
+           // 0~length-1
+           function suiji(arr,num){
+           let newarr = [];
+           for(let i=0;i<num;i++){
+           	let result =Math.floor(Math.random()*arr1.length);
+           	if(newarr.includes(arr1[result])){
+           		i--;
+           	}
+           	else{
+           		newarr.push(arr1[result]);
+           	}           	
+           }
+           return newarr;
+        }
+        console.log(suiji(arr1,3));
+
+        // // 2.随机取数
+        //    let arr = [1,2,3,4,5,6,7];
+        //    // 0~length-1
+        //    function suiji(arr,num){
+        //    let newarr = [];
+        //    for(let i=0;i<num;i++){
+        //    	let result =Math.floor(Math.random()*arr.length);
+        //  	 while(newarr.includes(arr[result])){
+        // 		result =Math.floor(Math.random()*arr.length);
+        // 	}
+        // 	newarr.push(arr[result]);          		
+        //    }
+        //    return newarr;
+        // }
+        // console.log(suiji(arr,3));
+
+
+        // 3.随机取数
+        //    let arr = [1,2,3,4,5,6,7];
+        //    // 0~length-1
+        //    function suiji(arr,num){
+        //    let newarr = [];
+        //    while(newarr.length<num){
+        //    	let result =Math.floor(Math.random()*arr.length);
+        //    	if(!newarr.includes(arr[result])){
+        //    		newarr.push(arr[result]);
+        //    	}          	
+        //    }
+        //    return newarr;
+        //    }
+        //    console.log(suiji(arr,3));
+        
+
+        // 练习
+        // let arr = [1,5,3,6,9,1,5,3];
+        // function rand(arr,num){
+        //     let newarr = [];
+        //     while(newarr.length<num){
+        //         let result = Math.floor(Math.random()*arr.length);
+        //         if(!newarr.includes(arr[result])){
+        //             newarr.push(arr[result]);
+        //         }
+        //     }
+        //     return newarr;
+        // }
+        // console.log(rand(arr,3));
+	</script>
+</body>
+</html>
